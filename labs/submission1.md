@@ -24,9 +24,9 @@ Commit signing adds a cryptographic signature to my Git commits which confirms t
 
 1. **PR template on main branch and description auto-filling**:
 
-![.github/pull_request_template.md exists]()
+![.github/pull_request_template.md exists](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab1/labs/assets/screenshots/lab1.4.png?raw=true)
 
-![auto-filling]()
+![auto-filling](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab1/labs/assets/screenshots/lab1.5.png?raw=true)
 
 2. **How do PR templates improve collaboration?**
 
