@@ -21,3 +21,17 @@ Commit signing adds a cryptographic signature to my Git commits which confirms t
 ![verified commit](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab1/labs/assets/screenshots/lab1.3.png?raw=true)
 
 ## Task 2
+
+1. **PR template on main branch and description auto-filling**:
+
+![.github/pull_request_template.md exists](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab1/labs/assets/screenshots/lab1.4.png?raw=true)
+
+![auto-filling](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab1/labs/assets/screenshots/lab1.5.png?raw=true)
+
+2. **How do PR templates improve collaboration?**
+
+PR templates improve collaboration by standardizing communication and saving time for routine pull request description filling. They ensure pull requests include key information like context, testing steps, and screenshots, making reviews faster and more consistent.
+
+3. **Challenges encountered during setup:**
+
+Initially I already was working on feature/lab1 branch and I was confused about the location of the template file, so my first pull request was without description auto-filling by template.
