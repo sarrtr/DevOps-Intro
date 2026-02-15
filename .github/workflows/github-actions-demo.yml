@@ -30,14 +30,86 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo " 🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      
       - name: Check out repository code
         uses: actions/checkout@v5
+      
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      
+      - name: Gather system information
+        run: |
+          echo "🔧 ===== SYSTEM INFORMATION ====="
+          echo ""
+          echo "📊 OPERATING SYSTEM DETAILS:"
+          echo "-------------------------------"
+          echo "OS Information:"
+          cat /etc/os-release
+          echo ""
+          echo "Kernel Version:"
+          uname -a
+          echo ""
+          echo "Hostname:"
+          hostname
+          echo ""
+          
+          echo "💻 HARDWARE SPECIFICATIONS:"
+          echo "-------------------------------"
+          echo "CPU Information:"
+          echo "  Model: $(grep "model name" /proc/cpuinfo | head -1 | cut -d':' -f2 | xargs)"
+          echo "  Cores: $(nproc)"
+          echo "  Architecture: $(uname -m)"
+          echo ""
+          
+          echo "Memory Information:"
+          echo "  Total RAM: $(free -h | grep "Mem:" | awk '{print $2}')"
+          echo "  Available RAM: $(free -h | grep "Mem:" | awk '{print $7}')"
+          echo "  Swap: $(free -h | grep "Swap:" | awk '{print $2}')"
+          echo ""
+          
+          echo "💾 DISK INFORMATION:"
+          echo "-------------------------------"
+          echo "Disk Usage:"
+          df -h / | tail -1 | awk '{print "  Total: " $2 ", Used: " $3 ", Available: " $4 ", Use%: " $5}'
+          echo ""
+          echo "Filesystem Type:"
+          df -T / | tail -1 | awk '{print "  Type: " $2}'
+          echo ""
+          
+          echo "🌐 NETWORK INFORMATION:"
+          echo "-------------------------------"
+          echo "Network Interfaces:"
+          ip -brief addr show | grep -v "lo" || ifconfig | grep -E "^[a-z]"
+          echo ""
+          echo "DNS Configuration:"
+          cat /etc/resolv.conf | grep "nameserver" || echo "  No DNS info available"
+          echo ""
+          
+          echo "⏱️  SYSTEM LOAD:"
+          echo "-------------------------------"
+          echo "Uptime:"
+          uptime
+          echo ""
+          echo "Load Average:"
+          cat /proc/loadavg
+          echo ""
+          
+          echo "👤 RUNNER USER INFORMATION:"
+          echo "-------------------------------"
+          echo "Current User: $(whoami)"
+          echo "Home Directory: $HOME"
+          echo "Current Directory: $(pwd)"
+          echo "Shell: $SHELL"
+          echo ""
+          
+          echo "✅ System information gathering complete!"
+      
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      
       - run: echo "🍏 This job's status is ${{ job.status }}."
