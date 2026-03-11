@@ -2,9 +2,9 @@
 
 ## Task 1
 
-![6.1](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.1.jpg?raw=true)
-![6.2](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.2.jpg?raw=true)
-![6.5](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.5.jpg?raw=true)
+![6.1](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.1.png?raw=true)
+![6.2](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.2.png?raw=true)
+![6.5](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.5.png?raw=true)
 
 - Image size: 119MB
 - Layer count: 1
@@ -12,17 +12,17 @@
 
 Tar file size is less than full image size (image layers are compressed) and roughly equal to content size of image. Tar file contains layer data and metadata, manifest file, config file and repository information.
 
-![6.3](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.3.jpg?raw=true)
-![6.4](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.4.jpg?raw=true)
+![6.3](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.3.png?raw=true)
+![6.4](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.4.png?raw=true)
 
 Image removal fails when a container exists because image is the base for container and it keeps base file system for its container. When we try to remove image with existing containers we try to break their integrity: the container will have nothing to rely on.
 
 ## Task 2
 
-![6.6](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.6.jpg?raw=true)
-![6.7](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.7.jpg?raw=true)
-![6.8](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.8.jpg?raw=true)
-![6.9](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.9.jpg?raw=true)
+![6.6](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.6.png?raw=true)
+![6.7](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.7.png?raw=true)
+![6.8](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.8.png?raw=true)
+![6.9](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.9.png?raw=true)
 
 - `diff` output: 
 `C` indicates that these files or directories were changed after the container started. Specifically, Nginx created a runtime process ID file (/run/nginx.pid) and modified its default configuration file (/etc/nginx/conf.d/default.conf).
@@ -33,8 +33,8 @@ Image removal fails when a container exists because image is the base for contai
 
 ## Task 3
 
-![6.10](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.10.jpg?raw=true)
-![6.11](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.11.jpg?raw=true)
+![6.10](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.10.png?raw=true)
+![6.11](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.11.png?raw=true)
 
 Docker has an embedded DNS server that automatically resolves container names to IP addresses when containers are on the same user-defined network, allowing communication via container name instead of IP.
 
@@ -45,7 +45,7 @@ User-defined bridge advantages:
 
 ## Task 4
 
-![6.12](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.12.jpg?raw=true)
+![6.12](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab6.12.png?raw=true)
 
 Why persistence matters:
 Persistence ensures data survives container restarts, updates, or crashes, which is critical for databases, user uploads, and application state.
