@@ -4,18 +4,22 @@
 
 Initial `desired-state.txt`:
 
+```
 version: 1.0
 app: myapp
 replicas: 3
+```
 
 `current-state.txt`:
 
+```
 version: 1.0
 app: myapp
 replicas: 3
+```
 
-![7.1]()
-![7.2]()
+![7.1](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab7/labs/assets/screenshots/lab7.1.png?raw=true)
+![7.2](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab7/labs/assets/screenshots/lab7.2.png?raw=true)
 
 
 **GitOps reconciliation loop. How does this prevent configuration drift?**
@@ -57,8 +61,8 @@ Wed Mar 18 14:59:22 RTZ 2026 - ✅ OK: States synchronized
 Wed Mar 18 14:59:25 RTZ 2026 - ✅ OK: States synchronized
 ```
 
-![7.3]()
-![7.4]()
+![7.3](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab7/labs/assets/screenshots/lab7.3.png?raw=true)
+![7.4](https://github.com/sarrtr/DevOps-Intro/blob/feature/lab7/labs/assets/screenshots/lab7.4.png?raw=true)
 
 **How do checksums (MD5) help detect configuration changes?**
 
