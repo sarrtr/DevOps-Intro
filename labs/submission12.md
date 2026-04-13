@@ -3,10 +3,10 @@
 ## Task 1
 
 **Screenshot of CLI mode output (MODE=once), confirmation that I am working directly in labs/lab12/ directory:**
-![12.2]()
+![12.2](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab12.2.png?raw=true)
 
 **Screenshot of server mode running in browser (if tested)**
-![12.1]()
+![12.1](https://github.com/sarrtr/DevOps-Intro/blob/main/labs/assets/screenshots/lab12.1.png?raw=true)
 
 **Explanation of how the single main.go works in three different contexts:**
 
